@@ -1,0 +1,84 @@
+.btn {
+	font-size: 15px;
+	padding: 3px 9px;
+
+
+	@media (min-width: @screen-sm-min) {
+		.button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+	}
+}
+
+.btn-view1 {
+	color: @gray;
+	background-color: @white;
+	border-color: @gray5;
+
+	&:hover {
+		color: @blue1;
+		border-color: @blue1;
+	}
+
+	&.disabled,
+  	&[disabled] {
+  		color: @gray2;
+  		background-color: @gray5;
+  		border-color: @gray4;
+  	}
+}
+
+.btn-view2 {
+	color: @white;
+	background-color: @orange1;
+	border-color: @orange4;
+	border-width: 2px;
+	font-weight: 600;
+
+	&:hover {
+		color: @white;
+		background-color: @orange4;
+	}
+
+	&.disabled,
+  	&[disabled] {
+  		color: @gray2;
+  		background-color: @gray5;
+  		border-color: @gray5;
+  	}
+
+  	@media (max-width: @screen-xs-max) {
+  		padding-top: 2px;
+  		padding-bottom: 2px;
+  		font-weight: 400;
+  	}
+}
+
+.btn-more {
+	display: inline-block;
+	position: relative;
+	.size(60px;20px);
+	font-size:0;
+	line-height: 0;
+	color: @gray3;
+	font-style: normal;
+	border-radius: @border-radius-base;
+	background-color: @gray5;
+	cursor: pointer;
+
+	&:after {
+		content:"...";
+		position: absolute;
+		top: -5px;
+		left: 13px;
+		font-size: 48px;
+		letter-spacing: -3px;
+	}
+
+	&.active {
+		background-color: @blue1;
+		color: @white;
+	}
+}
+
+.btn-views {
+
+}

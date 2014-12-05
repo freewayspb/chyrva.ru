@@ -1,0 +1,273 @@
+.object-list-item {
+	border-bottom: 1px solid @gray5;
+
+	@media (min-width: @screen-sm-min) {
+		&:first-child {
+			border-top: 1px solid @gray5;
+		}
+	}
+
+	&:last-child {
+		border-bottom: 0;
+	}
+
+	&:nth-child(odd) .cell-last {
+		background-color: #f3f7f9
+	}
+}
+
+.object-list-item-default {
+	background-color: #fafafa
+}
+
+
+.object-img {
+	float: left;
+	width: 70px;
+	padding: @padding-custom-large 0 @padding-custom-large 15px;
+
+	@media (min-width: @screen-sm-min) {
+		width: 140px;
+	}
+
+	img {
+		max-width: 100%;
+	}
+}
+
+.object-info {
+	margin-left: 80px;
+	@media (min-width: @screen-sm-min) {
+		margin-left: 155px;
+		display: table;
+	}
+
+	.row {
+		margin: 0;
+		@media (min-width: @screen-sm-min) {
+			display: table-row;
+		}
+	}
+
+	.cell-first {
+		padding: @padding-custom-large @padding-custom-large @padding-custom-large 0;
+		@media (min-width: @screen-sm-min) {
+			display: table-cell;
+			width: 77%;
+		}
+	}
+
+	.cell-last {
+		display: none;
+		@media (min-width: @screen-sm-min) {
+			display: table-cell;
+			width: 23%;
+			background-color: #f8fbfc;
+			padding: @padding-custom-large;
+		}
+	}
+}
+
+.object-status {
+	position: relative;
+	line-height: 16px;
+
+	@media (min-width: @screen-sm-min) {
+		padding-bottom: 4px;
+	}
+}
+
+.object-id {
+	position: absolute;
+	top: 2px;
+	right: 0;
+	font-size: 9px;
+	font-weight: 800;
+	color: @gray2;
+	display: none;
+	@media (min-width: @screen-sm-min) {
+		display: block;
+	}
+}
+
+.object-title {
+	margin-top: 5px;
+	margin-bottom: 0;
+	font-size: @font-size-large;
+	font-weight: 600;	
+	
+	@media (min-width: @screen-sm-min) {
+		font-size: @font-size-xlarge;		
+		margin-top: 9px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		font-weight: normal;
+		font-size: 16px;
+	}
+}
+
+.object-description {
+	margin-top: 3px;
+}
+
+.object-badge {
+	display: block;
+	color: @gray2;
+	margin-bottom: 5px;
+
+	@media (min-width: @screen-sm-min) {
+		display: inline-block;
+		margin-bottom: 0;
+		margin-left: 15px;
+	}
+}
+
+.object-action {
+	display: none;
+	margin-top: @padding-custom-large;
+
+	@media (min-width: @screen-sm-min) {
+		display: block;
+	}
+
+	.btn {
+		margin:0 7px 10px 0;
+		@media (min-width: @screen-sm-min) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.object-views {
+	color: @gray2;
+	font-size: @font-size-small;
+	padding-bottom: 4px;
+}
+
+.object-price {
+	font-weight: 600;
+	font-size: @font-size-xlarge;
+}
+
+.object-price-info {
+	display: block;
+	margin-top: 10px;
+	font-size: @font-size-small;
+	font-weight: 400;
+	color: @gray2;
+}
+
+.object-action-container {
+
+	.object-price {
+		display: none;
+		margin: 0;
+		padding-right: 75px;
+		font-size: @font-size-large
+	}
+	.object-price-info {
+		display: inline;
+		font-size: @font-size-base	;
+		color: @gray1;
+	}
+
+	@media (max-width: @screen-xs-max) {
+		margin-right: -20px;
+		position: relative;
+		padding: 9px 10px; 
+		background-color: #f3f7f9;
+		.object-price {
+			display: block;
+		}		
+	}
+
+	.btn-more {
+		display: block;
+		position: absolute;
+		top: 10px;
+		right: 15px;
+
+		&:hover {
+			background-color: @blue1;
+			color: @white;
+		}
+
+		@media (min-width: @screen-sm-min) {
+			display: none;
+		}
+	}
+}
+
+.object-action-container-show {
+	.object-action {
+		display: block;
+		margin-top: 12px;
+	}
+
+	.btn-more {
+		background-color: @blue1;
+		color: @white;
+	}
+}
+
+
+// Label status
+// --------------------------------------------------
+
+.label-status {
+	font-size: @font-size-small;
+	@media (min-width: @screen-sm-min) {
+		position: relative;
+		display: inline-block;
+		max-width: 365px;
+		.text-overflow();
+		font-size: @font-size-base;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			.size(16px; 16px);
+			border: 1px solid @gray5;
+			border-radius: 50%;
+			vertical-align: -3px;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			.size(10px; 10px);
+			border-radius: 50%;
+		}
+	}
+}
+
+.label-status-open {
+	color: #10b12b;
+	&:after {
+		background-color: #10b12b;
+	}
+}
+
+.label-status-tender {
+	color: @blue3;
+	&:after {
+		background-color: @blue3;
+	}
+}
+
+.label-status-default {
+	color: @gray7;
+	&:after {
+		background-color: @gray7;
+	}
+}
+
+.label-status-rejected {
+	color: @red3;
+	&:after {
+		background-color: @red3;
+	}
+}

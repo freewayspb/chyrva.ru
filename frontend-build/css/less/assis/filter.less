@@ -1,0 +1,92 @@
+.content-header {
+	position: relative;
+	background-color: @gray6;
+	padding: 15px;
+	min-height: 50px;
+	border-top: 1px solid @gray5;	
+	.clearfix();
+
+	@media (min-width: @screen-sm-min) {
+		min-height: 60px;
+		padding: @padding-custom-large;
+		border-bottom: 1px solid @gray5;
+	}
+}
+
+.sui-filter {
+	.btn-toolbar {
+		display: none;
+
+		@media (min-width: @screen-sm-min) {
+			margin-left: -20px;
+			display: block;
+		}
+	}
+
+	.btn-group {
+		margin-top: 10px;
+		@media (min-width: @screen-sm-min) {
+			margin-top: 0;
+			margin-left: 20px;
+		}
+	}
+
+	.btn {
+		padding: 3px 9px;
+		@media (min-width: @screen-sm-min) {
+			font-weight: 600;
+			padding: 6px 9px;
+		}
+	}
+	
+	.btn-default {
+		&:hover {
+			color: @blue1;
+			background-color: @white;
+			border-color: @gray5;
+			z-index: 0;
+		}
+
+		&.active {
+			box-shadow: none;
+			border-color: @blue1;
+			background-color: @blue1;
+			border-radius: 4px !important;
+			color: @white;
+			z-index: 1;
+		}
+	}
+}
+.sui-filter-show {
+	.btn-toolbar {
+		display: block;
+	}
+}
+
+.btn-filter {
+	position: absolute;
+	top: 17px;
+	right: 15px;
+	color: @blue1;
+	cursor: pointer;
+}
+
+
+.sub-filter {
+	padding: 10px @padding-custom-large;
+}
+
+.sub-filter-item {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.sui-dropdown {
+	.dropdown-toogle {
+		color: @blue1;
+	}
+
+	.caret {
+		color: #b2b5ba;
+	}
+}

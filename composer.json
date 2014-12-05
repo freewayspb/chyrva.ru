@@ -1,0 +1,9 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "dev-master",
+        "components/jquery": "dev-master",
+        "afarkas/html5shiv": "dev-master",
+        "fortawesome/font-awesome": "4.0.*@dev",
+        "twbs/bootstrap": "3.3.*@dev"
+    }
+}

@@ -1,0 +1,139 @@
+.menu {
+	margin-top: 25px;
+	padding-left: 0;
+	list-style: none;
+
+	@media (min-width: @screen-sm-min) {
+		.divider {
+			height: 1px;
+			margin: 14px 0;
+			overflow: hidden;
+			background-color: @gray5;
+		}
+	}
+}
+
+.menu-item {
+	position: relative;
+	border-bottom: 2px solid @blue4;
+
+	@media (min-width: @screen-sm-min) {
+		border-bottom: 0;
+		margin: 8px 0;
+	}
+}
+
+.menu-item-link {
+	display: block;
+	position: relative;
+	margin-right: 65px;
+	padding-left: 10px;
+	height: 48px;
+	font-size: @font-size-xlarge;
+	color: @blue1;	
+	line-height: 48px;
+
+	
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	@media (min-width: @screen-sm-min) {
+		margin-right: 0;
+		height: auto;
+		font-size: @font-size-base;
+		color: @gray1;
+		line-height: @line-height-base;
+
+		&.active {
+			color: @blue1;
+		}
+
+		&:hover {
+			color: @gray1;			
+
+			.menu-item-name {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		padding: 0;
+	}
+}
+
+.menu-item-value {
+	display: inline-block;
+	margin-left: 30px;
+	padding: 8px 10px;
+	border-radius: @border-radius-small;
+	font-size: @font-size-large;
+	color: @gray1;
+	line-height: 1;
+	background-color: @blue4;
+
+	@media (min-width: @screen-sm-min) {
+		position: absolute;
+		top: 2px;
+		right: 20px;
+		padding: 0;
+		margin-left: 0;
+		font-weight: 800;
+		font-size: @font-size-base;
+		background-color: transparent;
+	}
+
+	@media (min-width: @screen-md-min) {
+		right: 0;
+	}
+}
+
+.menu-item-value-money {
+	padding-left: 8px;
+	padding-right: 8px;
+
+	@media (min-width: @screen-sm-min) {
+		padding: 0;
+	}
+}
+
+.btn-add {
+	position: absolute;
+	top: 9px;
+	right: 15px;
+	.size(49px; 30px);
+	padding: 0;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	background-color: @blue1;
+	border-radius: @border-radius-small;
+
+	&:hover {
+		color: #fff;
+	}
+
+	@media (min-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+.menu-item-void {
+	@media (min-width: @screen-sm-min) {
+		.btn-add{
+			.btn-view2();
+			display: block;
+			right: 20px;
+			top: 2px;
+			width: auto;
+			height: auto;
+			line-height: 1;
+			padding: 0 8px;
+			@media (min-width: @screen-md-min) {
+				right: 0;
+			}
+		}
+	}
+}

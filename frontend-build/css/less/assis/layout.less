@@ -1,0 +1,84 @@
+.main-content {
+	.container {
+
+		padding-right: 0; 
+		padding-left: 0;
+
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			width: 100%;
+		}
+	}
+}
+
+
+
+.sidepanel {
+	@media (max-width: @screen-sm-max) {
+		width: 100%;
+		position: fixed;
+		top: 40px;
+		left: 0;
+		.transition(transform .5s ease-in-out);
+		.translate3d(-100%, 0, 0);
+		background: @white;
+		z-index: 1010;	
+	}
+
+
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+		position: fixed;
+		top: 60px;
+		bottom: 0;
+		width: 250px;				
+	}	
+
+	@media (min-width: @screen-md-min) {
+		float: left;
+		width: 170px;
+	}
+}
+
+.content {
+	
+	border-top: 0;
+
+	@media (min-width: @screen-md-min) {
+		.transition(none);
+		margin-left: 190px;
+		border: 1px solid @gray5;
+		overflow: hidden;
+	}
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	background: #000;
+	opacity: 0;
+	.transition(opacity 0.5s ease-in-out);
+	z-index: 1000;
+	.user-select(none);
+}
+
+.menu-open {
+	height: 100%;
+	overflow: hidden;
+	backface-visibility: hidden;
+
+	.sidepanel {
+		.translate3d(0, 0, 0);
+	}
+
+
+	.overlay {
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			opacity: 0.2;
+			display: block;
+		}
+	}
+}
+

@@ -1,0 +1,131 @@
+/* Bootstrap */
+.navbar {
+	min-height: 40px;
+	border-bottom-color: @gray5;
+	background: @white;
+
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+		height: 60px;
+	}
+
+	.container {
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			width: auto;
+			padding: 0;
+		}
+	}
+
+	.divider-vertical {
+		height: 40px;
+		border-left: 1px solid @gray5;
+	}
+}
+
+.navbar-brand {
+	position: absolute;
+	right: 0;
+	padding: 0;
+	margin-right: @navbar-padding-horizontal;
+	width: 30px;
+	height: 40px;
+	overflow: hidden;
+
+	@media (min-width: @screen-sm-min) {
+		top: 8px;
+		width: auto;
+		padding-left: @navbar-padding-horizontal;
+	}
+
+	@media (min-width: @screen-md-min) {
+		position: static;
+		padding-left: 0;
+		float: left;
+		height: 40px;
+	}
+}
+
+.navbar-header {
+	@media (min-width: @screen-sm-min) {
+		float: none;
+	}
+
+	@media (min-width: @screen-md-min) {
+		float: left;
+	}
+}
+
+.navbar-toggle {
+	margin: 0;
+	float: left;
+	border: 0;
+	border-radius: 0;
+	padding: 12px 15px;
+
+	@media (max-width: @screen-sm-max) {
+		display: block;
+	}
+
+	@media (min-width: @screen-sm-min) {
+		padding-top: 17px;
+		padding-bottom: 17px;
+	}
+
+	&:hover, &:focus {
+		background-color: transparent;
+	}
+
+	.icon-bar {
+	    display: block;
+	    width: 21px;
+	    height: 4px;
+	    border-radius: 2px;
+	    background-color: @blue1;
+
+	    @media (min-width: @screen-sm-min) {
+			width: 35px;
+			height: 6px;
+			border-radius: 3px;
+		}
+	}
+
+	.icon-bar + .icon-bar {
+		@media (max-width: @screen-xs-max) {
+			margin-top: 2px;
+		}
+	}
+}
+
+.navbar-collapse.collapse {
+	@media (max-width: @screen-sm-max) {
+		display: none !important;
+	}
+}
+
+.navbar-nav > li > a {
+	padding: 11px 15px;
+	color: @gray1;
+	font-weight: 600;
+}
+
+/* Service UI */
+.sui-navbar-toogle-title {
+	display: none;
+	font-size: @font-size-xlarge;
+	font-weight: 600;
+	margin-top: -26px;
+	margin-left: 53px;
+
+	@media (min-width: @screen-sm-min) {
+		display: block;
+	}
+}
+
+.sui-navbar-header-text {
+	text-align: center;
+	line-height: 40px;
+	font-size: @font-size-large;
+}
+
+.logo-text {
+	display: none;
+}
